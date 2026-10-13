@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lego. — The Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Jasim, web developer based in Kerala, India. Specialised in creative development, UX design, and modern web applications.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-sage">
+  <!-- Main Grid Frame -->
+  <div class="site-container">
+    
+    <!-- TOP NAVIGATION BAR -->
+    <header class="site-header" id="header">
+      <div class="header-logo-col">
+        <a href="#hero" class="brand-logo" aria-label="lego. homepage">lego.</a>
+      </div>
+
+      <div class="header-ticker-col" aria-live="off">
+        <div class="world-clocks-wrapper">
+          <div class="world-clocks-ticker" id="clocksTicker">
+            <span class="clock-item" data-tz="Europe/Berlin"><span class="clock-time">02:02:47</span> <span class="clock-zone">CEST</span></span>
+            <span class="ticker-slash">/</span>
+            <span class="clock-item" data-tz="Europe/London"><span class="clock-city">LONDON</span> <span class="clock-time">01:02:47</span> <span class="clock-zone">BST</span></span>
+            <span class="ticker-slash">/</span>
+            <span class="clock-item" data-tz="America/New_York"><span class="clock-city">NEW YORK</span> <span class="clock-time">20:02:47</span> <span class="clock-zone">EDT</span></span>
+            <span class="ticker-slash">/</span>
+            <span class="clock-item" data-tz="America/Los_Angeles"><span class="clock-city">LOS ANGELES</span> <span class="clock-time">17:02:47</span> <span class="clock-zone">PDT</span></span>
+            <span class="ticker-slash">/</span>
+            <span class="clock-item" data-tz="Australia/Brisbane"><span class="clock-city">BRISBANE</span> <span class="clock-time">10:02:47</span> <span class="clock-zone">AEST</span></span>
+          </div>
+        </div>
+        <div class="ticker-accent-pill" aria-hidden="true"></div>
+      </div>
+
+      <div class="header-actions-col">
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle visual theme">
+          <span class="theme-label" id="themeLabel">LIGHT</span>
+          <span class="theme-checkbox-box"></span>
+        </button>
+        <button class="menu-toggle-btn" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- SECTION 1: LANDING / HERO + ABOUT SECTION -->
+    <main>
+      <section class="landing-section" id="hero" aria-label="Introduction">
+        
+        <!-- TOP HERO ROW: Title + Bench Portrait -->
+        <div class="hero-top-row">
+          <div class="hero-title-cell">
+            <span class="section-eyebrow">THE</span>
+            <h1 class="hero-main-title">entrepreneur.</h1>
+          </div>
+          
+          <div class="hero-image-cell">
+            <div class="image-frame">
+              <img src="assets/miguel_bench.jpg" alt="Jasim sitting on a wooden bench outdoors with headphones around his neck" class="hero-bench-img" loading="eager" fetchpriority="high">
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM ABOUT ROW: This is me + Bio -->
+        <div class="hero-bottom-row">
+          <div class="about-left-col">
+            <div class="about-header-text">
+              <span class="sub-greeting">HI, I'M JASIM!</span>
+              <h2 class="sub-title">This is me.</h2>
+            </div>
+            <div class="about-photo-wrapper">
+              <img src="assets/miguel_nature.jpg" alt="Jasim in lush nature greenery" class="about-nature-img" loading="lazy">
+            </div>
+          </div>
+
+          <div class="about-right-col">
+            <div class="about-right-content">
+              <h3 class="editorial-headline">
+                <span class="headline-line-1"><span class="highlight-crimson">Your friendly</span> <span class="highlight-brown">neighbourhood</span></span>
+                <span class="headline-line-2 highlight-ghost">developer.</span>
+              </h3>
+
+              <div class="editorial-bio-body">
+                <p>
+                  I'm a 21-year-old web developer based in Kerala, India. My path started in 100K Codding Challenge, eventually graduating in Bachelor of Sociology from Pondicherry University and DUDC in Arabic Language and Literature and now Post graduating in Education from Darul Huda University with Bachelor of Business Administration from Uop but somewhere between working in academics and wondering how the whole internet is working, I fell down the development rabbit hole and never climbed back out.
+                </p>
+                <p>
+                  These days I spend most of my time building things in the browser with a designer's eye for detail and a developer's stubbornness about getting the spacing right. When I'm not writing code, I'm writing and researching topic out of my hands, which keeps the creative side of my brain from getting rusty.
+                </p>
+              </div>
+
+              <div class="editorial-meta-footer">
+                <div class="meta-status">
+                  <span class="status-indicator-dot"></span>
+                  <span>AVAILABLE FOR SELECTIVE PROJECTS &bull; 2026/2027</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: SELECTED WORKS SECTION -->
+      <section class="works-section" id="works" aria-label="Selected Works">
+        
+        <!-- SECTION TITLE BAR -->
+        <div class="works-header-bar">
+          <div class="works-header-title-box">
+            <span class="section-eyebrow">SELECTED</span>
+            <h2 class="works-main-title">works.</h2>
+          </div>
+          <div class="works-header-indicator" aria-hidden="true">
+            <span class="scroll-arrow">&#9650;</span>
+          </div>
+        </div>
+
+        <!-- 3-COLUMN WORKS WORKSPACE -->
+        <div class="works-workspace-grid">
+          
+          <!-- LEFT COLUMN: THUMBNAILS LIST OF DIFFERENT WORKS -->
+          <aside class="works-thumbs-column" aria-label="Project Selection Thumbnails">
+            <div class="thumb-list" id="projectThumbList" role="tablist" aria-orientation="vertical">
+              
+              <!-- Project 1 Thumbnail -->
+              <button class="thumb-item is-active" role="tab" id="tab-0" aria-selected="true" aria-controls="project-panel" data-index="0">
+                <div class="thumb-image-wrap">
+                  <img src="assets/project_maharanis.jpg" alt="Maharanis project preview thumbnail">
+                </div>
+                <div class="thumb-active-bar"></div>
+              </button>
+
+              <!-- Project 2 Thumbnail -->
+              <button class="thumb-item" role="tab" id="tab-1" aria-selected="false" aria-controls="project-panel" data-index="1">
+                <div class="thumb-image-wrap">
+                  <img src="assets/project_tokyo.jpg" alt="NeoTokyo Nightlife project preview thumbnail">
+                </div>
+                <div class="thumb-active-bar"></div>
+              </button>
+
+              <!-- Project 3 Thumbnail -->
+              <button class="thumb-item" role="tab" id="tab-2" aria-selected="false" aria-controls="project-panel" data-index="2">
+                <div class="thumb-image-wrap">
+                  <img src="assets/project_transit.jpg" alt="Metro Transit Film project preview thumbnail">
+                </div>
+                <div class="thumb-active-bar"></div>
+              </button>
+
+              <!-- Project 4 Thumbnail -->
+              <button class="thumb-item" role="tab" id="tab-3" aria-selected="false" aria-controls="project-panel" data-index="3">
+                <div class="thumb-image-wrap">
+                  <img src="assets/project_studio.jpg" alt="Studio Canvas OS project preview thumbnail">
+                </div>
+                <div class="thumb-active-bar"></div>
+              </button>
+
+            </div>
+          </aside>
+
+          <!-- CENTER COLUMN: FEATURED PROJECT CARD -->
+          <div class="works-featured-column" id="project-panel" role="tabpanel" aria-labelledby="tab-0">
+            <div class="featured-card">
+              
+              <!-- Maroon Header Block -->
+              <div class="featured-header-box" id="featuredHeader">
+                <div class="featured-meta-row">
+                  <h3 class="featured-project-title" id="projectTitle">Maharanis</h3>
+                  <span class="featured-category" id="projectCategory">COMPANY WEBSITE</span>
+                </div>
+
+                <div class="featured-actions-row">
+                  <div class="featured-tags-list" id="projectTags">
+                    <span class="tag-pill">WEB DEVELOPMENT</span>
+                    <span class="tag-pill">SHOPIFY</span>
+                    <span class="tag-pill">E-COMMERCE</span>
+                  </div>
+
+                  <a href="#learn-more" class="featured-learn-link" id="projectLink">
+                    <span>LEARN MORE</span>
+                    <span class="link-arrow">&gt;</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Big Visual Showcase Image Container -->
+              <div class="featured-visual-box">
+                <img src="assets/project_maharanis.jpg" alt="Maharanis Indian Restaurant project displayed on laptop" class="featured-main-img" id="projectMainImg">
+                <div class="featured-image-reflection" aria-hidden="true"></div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: ARTISTIC DEVELOPER PORTRAIT WITH CAMERA -->
+          <aside class="works-portrait-column" aria-label="Editorial Developer Visual">
+            <div class="portrait-wrapper">
+              <img src="assets/miguel_camera.jpg" alt="Miguel holding a vintage camera looking down in high contrast black and white" class="dev-camera-img">
+            </div>
+            <div class="column-scroll-track" aria-hidden="true">
+              <div class="column-scroll-thumb"></div>
+            </div>
+          </aside>
+
+        </div>
+      </section>
+
+      <!-- SECTION 3: SERVICES SECTION -->
+      <section class="services-section" id="services" aria-label="Services">
+        
+        <!-- SERVICES HEADER BAR -->
+        <div class="services-header-bar">
+          <div class="services-header-index-col" aria-hidden="true"></div>
+          <div class="services-header-title-box">
+            <span class="section-eyebrow">THE</span>
+            <h2 class="services-main-title">services.</h2>
+          </div>
+        </div>
+
+        <!-- SERVICES ROWS -->
+        <div class="services-table">
+          
+          <!-- Service 1: Web Development -->
+          <article class="service-row">
+            <div class="service-index-cell">
+              <span class="service-num">01</span>
+            </div>
+            <div class="service-title-cell">
+              <h3 class="service-name">web development</h3>
+            </div>
+            <div class="service-list-cell">
+              <ul class="subservices-list">
+                <li>FRONT END</li>
+                <li>CMS INTEGRATION</li>
+                <li>CUSTOM SITES</li>
+                <li>WEB SCOPING</li>
+                <li>ECOMMERCE</li>
+                <li>WEB MAINTENANCE</li>
+              </ul>
+            </div>
+            <div class="service-visual-cell">
+              <img src="assets/service_webdev.jpg" alt="Web development laptop interface showcase" class="service-img" loading="lazy">
+            </div>
+          </article>
+
+          <!-- Service 2: SEO Management -->
+          <article class="service-row">
+            <div class="service-index-cell">
+              <span class="service-num">02</span>
+            </div>
+            <div class="service-title-cell">
+              <h3 class="service-name">seo management</h3>
+            </div>
+            <div class="service-list-cell">
+              <ul class="subservices-list">
+                <li>TECHNICAL SEO</li>
+                <li>KEYWORD RESEARCH</li>
+                <li>ON-PAGE OPTIMIZATION</li>
+                <li>PERFORMANCE & AUDIT</li>
+                <li>CONTENT STRATEGY</li>
+                <li>ANALYTICS & REPORTING</li>
+              </ul>
+            </div>
+            <div class="service-visual-cell">
+              <img src="assets/service_seo.jpg" alt="SEO management growth analytics dashboard showcase" class="service-img" loading="lazy">
+            </div>
+          </article>
+
+          <!-- Service 3: Dropshipping -->
+          <article class="service-row">
+            <div class="service-index-cell">
+              <span class="service-num">03</span>
+            </div>
+            <div class="service-title-cell">
+              <h3 class="service-name">dropshipping</h3>
+            </div>
+            <div class="service-list-cell">
+              <ul class="subservices-list">
+                <li>STORE SETUP</li>
+                <li>SUPPLIER SOURCING</li>
+                <li>PRODUCT RESEARCH</li>
+                <li>AUTOMATION WORKFLOW</li>
+                <li>CONVERSION OPTIMIZATION</li>
+                <li>AD CREATIVE STRATEGY</li>
+              </ul>
+            </div>
+            <div class="service-visual-cell">
+              <img src="assets/service_dropshipping.jpg" alt="Dropshipping e-commerce dashboard and store interface showcase" class="service-img" loading="lazy">
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- SECTION 4: CHAT SECTION -->
+      <section class="chat-section" id="chat" aria-label="Contact and Chat">
+        
+        <!-- CHAT HEADER BAR -->
+        <div class="chat-header-bar">
+          <div class="chat-header-index-col" aria-hidden="true"></div>
+          <div class="chat-header-title-box">
+            <span class="section-eyebrow">WANT TO</span>
+            <h2 class="chat-main-title">chat?</h2>
+          </div>
+        </div>
+
+        <!-- CHAT CONTENT ROW -->
+        <div class="chat-content-row">
+          <div class="chat-left-col">
+            <p class="chat-prompt-text">Got a project in mind? I'd love to hear about it.</p>
+            
+            <div class="chat-actions-wrap">
+              <a href="https://wa.me/918075866586?text=Hi%20Jasim,%20I'd%20love%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" class="contact-btn" id="contactBtn">
+                <span>CONTACT ME</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="chat-right-col">
+            <div class="chat-image-frame">
+              <img src="assets/chat_coastal.jpg" alt="Jasim with camera overlooking scenic coastal cliffs" class="chat-coastal-img" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: DYNAMIC CHROME DINO RUNNER BANNER -->
+      <section class="dino-section" id="dino-runner" aria-label="Offline Chrome Dinosaur Runner">
+        <div class="dino-header-bar">
+          <div class="dino-status-wrap">
+            <span class="dino-offline-badge">NO CONNECTION</span>
+            <span class="dino-hint">TAP / PRESS SPACE TO JUMP</span>
+          </div>
+          <div class="dino-score-wrap">
+            <span class="dino-hi-score">HI <span id="dinoHiScore">00980</span></span>
+            <span class="dino-curr-score" id="dinoScore">00000</span>
+          </div>
+        </div>
+
+        <div class="dino-canvas-wrap">
+          <canvas id="dinoCanvas" width="1680" height="180"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER SECTION (EXACT REPRODUCTION OF IMAGE 2) -->
+    <footer class="site-footer" id="footer" aria-label="Footer">
+      
+      <!-- Top Row: ABOUT | WORKS | CONTACT -->
+      <nav class="footer-top-nav-row" aria-label="Footer Navigation">
+        <a href="#hero" class="footer-nav-link">ABOUT</a>
+        <a href="#works" class="footer-nav-link">WORKS</a>
+        <a href="#chat" class="footer-nav-link">CONTACT</a>
+      </nav>
+
+      <!-- Middle Row: ELSEWHERE & COLOPHON -->
+      <div class="footer-middle-row">
+        <div class="footer-elsewhere-col">
+          <span class="footer-eyebrow">ELSEWHERE</span>
+          <ul class="footer-social-list">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">INSTAGRAM <span class="footer-arrow">&rarr;</span></a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YOUTUBE <span class="footer-arrow">&rarr;</span></a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LINKEDIN <span class="footer-arrow">&rarr;</span></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-colophon-col">
+          <span class="footer-eyebrow">COLOPHON</span>
+          <p class="footer-copyright-text">&copy; 2026 LEGO. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+
+      <!-- Bottom Row: Massive "lego." Display -->
+      <div class="footer-bottom-brand-row">
+        <h2 class="footer-massive-logo">lego.</h2>
+      </div>
+    </footer>
+
+    <!-- SLIDE OUT MENU MODAL -->
+    <div class="navigation-drawer" id="navDrawer" aria-hidden="true">
+      <div class="drawer-backdrop" id="drawerBackdrop"></div>
+      <div class="drawer-panel">
+        <div class="drawer-header">
+          <span class="drawer-brand">lego.</span>
+          <button class="drawer-close-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+        </div>
+        <nav class="drawer-nav">
+          <ul class="drawer-links">
+            <li><a href="#hero" class="drawer-nav-item"><span>01</span> The Entrepreneur</a></li>
+            <li><a href="#works" class="drawer-nav-item"><span>02</span> Selected Works</a></li>
+            <li><a href="#services" class="drawer-nav-item"><span>03</span> The Services</a></li>
+            <li><a href="#chat" class="drawer-nav-item"><span>04</span> Let's Chat</a></li>
+          </ul>
+        </nav>
+        <div class="drawer-footer">
+          <p>Kerala, India &bull; &copy; 2026 Jasim</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
