@@ -55,121 +55,182 @@ function initWorldClocks() {
 }
 
 /* ==========================================================================
-   2. SELECTED WORKS INTERACTIVE SWITCHER
+   2. SELECTED PROJECTS INTERACTIVE SHOWCASE CONTROLLER
    ========================================================================== */
 const PROJECTS_DATA = [
   {
-    title: 'Maharanis',
-    category: 'COMPANY WEBSITE',
-    tags: ['WEB DEVELOPMENT', 'SHOPIFY', 'E-COMMERCE'],
-    image: 'assets/project_maharanis.jpg',
-    imageAlt: 'Maharanis Indian Restaurant project displayed on laptop',
-    link: '#maharanis-case-study',
-    colorBox: '#651010'
+    id: 'dento-care',
+    num: '01',
+    name: 'dento-care',
+    title: 'Dento Care Dental Clinic',
+    category: 'HEALTHCARE & DENTAL CLINIC',
+    liveUrl: 'https://www.dentocareofficial.com',
+    displayUrl: 'https://www.dentocareofficial.com',
+    githubUrl: 'https://github.com/nessentialscode/dento-care.git',
+    mobileImg: 'assets/projects/fullpage/dentocare_mobile_full.png',
+    desktopImg: 'assets/projects/dentocare_desktop.png',
+    desktopFullImg: 'assets/projects/fullpage/dentocare_desktop_full.png',
+    tags: ['HEALTHCARE', 'DENTAL CLINIC', 'UI/UX DESIGN', 'NEXT.JS'],
+    colorBox: '#1d63c6',
+    description: 'Comprehensive dental clinic web platform featuring instant appointment scheduling, interactive service catalog, and treatment showcase.'
   },
   {
-    title: 'NeoTokyo Nightlife',
-    category: 'DIGITAL PLATFORM',
-    tags: ['CREATIVE DEV', 'THREE.JS', 'NEXT.JS'],
-    image: 'assets/project_tokyo.jpg',
-    imageAlt: 'NeoTokyo night cityscape project with illuminated skyscrapers',
-    link: '#neotokyo-case-study',
-    colorBox: '#13362a'
+    id: 'smile-dentos',
+    num: '02',
+    name: 'Smile-Dentos',
+    title: 'Smile Dentos Family Dental Care',
+    category: 'FAMILY DENTAL CLINIC',
+    liveUrl: 'https://www.smiledentos.com',
+    displayUrl: 'https://www.smiledentos.com',
+    githubUrl: 'https://github.com/nessentialscode/Smile_Dentos.git',
+    mobileImg: 'assets/projects/fullpage/smiledentos_mobile_full.png',
+    desktopImg: 'assets/projects/smiledentos_desktop.png',
+    desktopFullImg: 'assets/projects/fullpage/smiledentos_desktop_full.png',
+    tags: ['DENTAL CARE', 'RESPONSIVE WEB', 'APPOINTMENTS', 'LOCAL BUSINESS'],
+    colorBox: '#0097a7',
+    description: 'Modern family dental care portal with online booking, doctor profiles, multi-branch information, and direct WhatsApp integration.'
   },
   {
-    title: 'Metro Transit Film',
-    category: 'VISUAL ARCHIVE',
-    tags: ['ART DIRECTION', 'VIDEO', 'DOCUMENTARY'],
-    image: 'assets/project_transit.jpg',
-    imageAlt: 'Metro transit film documentary still frame inside carriage',
-    link: '#metro-transit-case-study',
-    colorBox: '#42281a'
+    id: 'al-shahama',
+    num: '03',
+    name: 'al-shahama-eye-hospital',
+    title: 'Al Shahama Eye Hospital',
+    category: 'OPHTHALMOLOGY & MEDICAL',
+    liveUrl: 'https://al-shahama-eye-hospital.vercel.app/',
+    displayUrl: 'https://al-shahama-eye-hospital.vercel.app/',
+    githubUrl: 'https://github.com/nessentialscode/al-shahama-eye-hospital.git',
+    mobileImg: 'assets/projects/fullpage/alshahama_mobile_full.png',
+    desktopImg: 'assets/projects/alshahama_desktop.jpg',
+    desktopFullImg: 'assets/projects/fullpage/alshahama_desktop_full.png',
+    tags: ['MEDICAL', 'EYE HOSPITAL', 'CLINICAL SERVICES', 'VERCEL'],
+    colorBox: '#d32f2f',
+    description: 'Advanced ophthalmology and eye care hospital website with department directories, specialist profiles, and surgical technology guides.'
   },
   {
-    title: 'Studio Canvas OS',
-    category: 'DESIGN SYSTEM',
-    tags: ['REACT', 'UI / UX', 'WEB APPLICATION'],
-    image: 'assets/project_studio.jpg',
-    imageAlt: 'Studio Canvas OS design interface shown on desktop display',
-    link: '#studio-canvas-case-study',
-    colorBox: '#1c2838'
+    id: 'naturals-salon',
+    num: '04',
+    name: 'naturals-salon',
+    title: 'Naturals Salon',
+    category: 'BEAUTY & WELLNESS PLATFORM',
+    liveUrl: 'https://naturals-salon-theta.vercel.app/',
+    displayUrl: 'https://naturals-salon-theta.vercel.app/',
+    githubUrl: 'https://github.com/nessentialscode/naturals-salon.git',
+    mobileImg: 'assets/projects/fullpage/naturals_mobile_full.png',
+    desktopImg: 'assets/projects/naturals_desktop.png',
+    desktopFullImg: 'assets/projects/fullpage/naturals_desktop_full.png',
+    tags: ['BEAUTY & SALON', 'SKINCARE', 'EDITORIAL DESIGN', 'CONSULTATION'],
+    colorBox: '#6a1b9a',
+    description: 'Editorial beauty and aesthetic skincare clinic platform with personalized treatment plans, consultation booking, and modern typography.'
   }
 ];
 
 function initWorksSwitcher() {
-  const thumbButtons = document.querySelectorAll('.thumb-item');
-  const projectTitle = document.getElementById('projectTitle');
-  const projectCategory = document.getElementById('projectCategory');
-  const projectTags = document.getElementById('projectTags');
-  const projectLink = document.getElementById('projectLink');
-  const projectMainImg = document.getElementById('projectMainImg');
-  const featuredHeader = document.getElementById('featuredHeader');
+  const columnButtons = document.querySelectorAll('.project-mobile-column');
+  const projectIndexEl = document.getElementById('activeProjectIndex');
+  const projectCategoryEl = document.getElementById('activeProjectCategory');
+  const projectTitleEl = document.getElementById('activeProjectTitle');
+  const projectDescEl = document.getElementById('activeProjectDesc');
+  const liveLinkEl = document.getElementById('activeLiveLink');
+  const githubLinkEl = document.getElementById('activeGithubLink');
+  const browserUrlEl = document.getElementById('browserUrlText');
+  const desktopScreenLinkEl = document.getElementById('desktopScreenLink');
+  const desktopImgEl = document.getElementById('activeDesktopImg');
+  const projectTagsEl = document.getElementById('activeProjectTags');
+  const desktopFrame = document.querySelector('.desktop-browser-frame');
 
-  if (!thumbButtons.length || !projectTitle || !projectMainImg) return;
+  if (!columnButtons.length || !desktopImgEl) return;
 
   function setProject(index) {
     const data = PROJECTS_DATA[index];
     if (!data) return;
 
-    // Update active thumb button
-    thumbButtons.forEach((btn, i) => {
+    // Update active states on mobile preview columns
+    columnButtons.forEach((col, i) => {
       const isActive = i === index;
-      btn.classList.toggle('is-active', isActive);
-      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
-      btn.setAttribute('tabindex', isActive ? '0' : '-1');
+      col.classList.toggle('is-active', isActive);
+      col.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      col.setAttribute('tabindex', isActive ? '0' : '-1');
+
+      const indicator = col.querySelector('.column-selection-indicator');
+      if (indicator) {
+        indicator.textContent = isActive ? 'CURRENT ACTIVE' : 'SELECT PROJECT';
+      }
     });
 
-    // Animate transition
-    projectMainImg.style.opacity = '0.3';
-    projectMainImg.style.transform = 'scale(0.98)';
+    // Animate transition on desktop preview
+    if (desktopFrame) {
+      desktopFrame.classList.add('is-switching');
+    }
+    desktopImgEl.style.opacity = '0.25';
+    desktopImgEl.style.transform = 'scale(0.985)';
 
     setTimeout(() => {
-      // Update text and content
-      projectTitle.textContent = data.title;
-      projectCategory.textContent = data.category;
-      projectMainImg.src = data.image;
-      projectMainImg.alt = data.imageAlt;
-      projectLink.href = data.link;
+      // Update text and metadata
+      if (projectIndexEl) projectIndexEl.textContent = data.num;
+      if (projectCategoryEl) projectCategoryEl.textContent = data.category;
+      if (projectTitleEl) projectTitleEl.textContent = data.name;
+      if (projectDescEl) projectDescEl.textContent = data.description;
 
-      // Update tags list
-      projectTags.innerHTML = '';
-      data.tags.forEach(tag => {
-        const span = document.createElement('span');
-        span.className = 'tag-pill';
-        span.textContent = tag;
-        projectTags.appendChild(span);
-      });
+      // Update URL and navigation links
+      if (browserUrlEl) browserUrlEl.textContent = data.displayUrl;
+      if (liveLinkEl) {
+        liveLinkEl.href = data.liveUrl;
+        liveLinkEl.setAttribute('aria-label', `Visit live website for ${data.name}`);
+      }
+      if (githubLinkEl) {
+        githubLinkEl.href = data.githubUrl;
+        githubLinkEl.setAttribute('aria-label', `View GitHub repository for ${data.name}`);
+      }
+      if (desktopScreenLinkEl) {
+        desktopScreenLinkEl.href = data.liveUrl;
+        desktopScreenLinkEl.setAttribute('aria-label', `Open ${data.name} desktop website in new tab`);
+      }
 
-      // Subtle atmospheric header accent color tint
-      featuredHeader.style.backgroundColor = data.colorBox;
+      // Update desktop image
+      desktopImgEl.src = data.desktopImg;
+      desktopImgEl.alt = `${data.name} desktop website layout`;
+
+      // Update tech tags
+      if (projectTagsEl) {
+        projectTagsEl.innerHTML = '';
+        data.tags.forEach(tag => {
+          const span = document.createElement('span');
+          span.className = 'tag-pill';
+          span.textContent = tag;
+          projectTagsEl.appendChild(span);
+        });
+      }
 
       // Restore image styles
-      projectMainImg.style.opacity = '1';
-      projectMainImg.style.transform = 'scale(1)';
+      desktopImgEl.style.opacity = '1';
+      desktopImgEl.style.transform = 'scale(1)';
+      if (desktopFrame) {
+        desktopFrame.classList.remove('is-switching');
+      }
     }, 180);
   }
 
-  // Click & keyboard handlers
-  thumbButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const idx = parseInt(btn.getAttribute('data-index'), 10);
+  // Click & keyboard handlers on the 4 mobile preview columns
+  columnButtons.forEach(col => {
+    col.addEventListener('click', () => {
+      const idx = parseInt(col.getAttribute('data-index'), 10);
       setProject(idx);
     });
 
-    btn.addEventListener('keydown', (e) => {
-      let currentIdx = parseInt(btn.getAttribute('data-index'), 10);
+    col.addEventListener('keydown', (e) => {
+      let currentIdx = parseInt(col.getAttribute('data-index'), 10);
       let targetIdx = null;
 
       if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
         e.preventDefault();
-        targetIdx = (currentIdx + 1) % thumbButtons.length;
+        targetIdx = (currentIdx + 1) % columnButtons.length;
       } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
         e.preventDefault();
-        targetIdx = (currentIdx - 1 + thumbButtons.length) % thumbButtons.length;
+        targetIdx = (currentIdx - 1 + columnButtons.length) % columnButtons.length;
       }
 
       if (targetIdx !== null) {
-        thumbButtons[targetIdx].focus();
+        columnButtons[targetIdx].focus();
         setProject(targetIdx);
       }
     });
@@ -192,9 +253,20 @@ function initThemeToggle() {
   const themeLabel = document.getElementById('themeLabel');
   if (!themeToggle || !themeLabel) return;
 
+  // Restore saved theme from localStorage
+  const savedTheme = localStorage.getItem('lego-theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('theme-dark');
+    themeLabel.textContent = 'DARK';
+  } else if (savedTheme === 'light') {
+    document.body.classList.remove('theme-dark');
+    themeLabel.textContent = 'LIGHT';
+  }
+
   themeToggle.addEventListener('click', () => {
     const isDark = document.body.classList.toggle('theme-dark');
     themeLabel.textContent = isDark ? 'DARK' : 'LIGHT';
+    localStorage.setItem('lego-theme', isDark ? 'dark' : 'light');
   });
 }
 

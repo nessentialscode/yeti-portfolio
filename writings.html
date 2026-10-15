@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>writings. — Jasim / lego.</title>
+  <meta name="description" content="Essays, research publications, and technical writings on sociology, web architecture, and design systems by Jasim.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('lego-theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('theme-dark');
+        document.addEventListener('DOMContentLoaded', () => document.body.classList.add('theme-dark'));
+      }
+    })();
+  </script>
+</head>
+<body class="theme-sage page-writings">
+
+  <!-- Right Fixed Architectural Scroll Indicator (Image 1 & Image 2) -->
+  <aside class="page-scroll-indicator" aria-label="Page Scroll Track">
+    <button class="scroll-arrow-btn" id="scrollUpBtn" aria-label="Scroll to top">&#9650;</button>
+    <div class="scroll-track-lane" id="scrollTrackLane">
+      <div class="scroll-thumb-pill" id="scrollThumbIndicator"></div>
+    </div>
+    <button class="scroll-arrow-btn" id="scrollDownBtn" aria-label="Scroll to archive">&#9660;</button>
+  </aside>
+
+  <!-- Master Site Container with 12-Column Grid Lines -->
+  <div class="site-container">
+    
+    <!-- 12-Column Architectural Background Grid Lines -->
+    <div class="architectural-grid-overlay" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="site-header" id="header">
+      <div class="header-logo-col">
+        <a href="index.html" class="brand-logo back-to-home" data-transition="curtain" aria-label="lego. homepage">lego.</a>
+      </div>
+
+      <div class="header-ticker-col" aria-live="off">
+        <div class="world-clocks-wrapper">
+          <div class="world-clocks-ticker" id="clocksTicker">
+            <span class="clock-item" data-tz="Europe/Berlin"><span class="clock-city">BERLIN</span> <span class="clock-time">02:02:47</span> <span class="clock-zone">CEST</span></span>
+            <span class="ticker-slash">/</span>
+            <span class="clock-item" data-tz="Europe/London"><span class="clock-city">LONDON</span> <span class="clock-time">01:02:47</span> <span class="clock-zone">BST</span></span>
+            <span class="ticker-slash">/</span>
+            <span class="clock-item" data-tz="America/New_York"><span class="clock-city">NEW YORK</span> <span class="clock-time">20:02:47</span> <span class="clock-zone">EDT</span></span>
+            <span class="ticker-slash">/</span>
+            <span class="clock-item" data-tz="America/Los_Angeles"><span class="clock-city">LOS ANGELES</span> <span class="clock-time">17:02:47</span> <span class="clock-zone">PDT</span></span>
+            <span class="ticker-slash">/</span>
+            <span class="clock-item" data-tz="Australia/Brisbane"><span class="clock-city">BRISBANE</span> <span class="clock-time">10:02:47</span> <span class="clock-zone">AEST</span></span>
+          </div>
+        </div>
+        <div class="ticker-accent-pill" aria-hidden="true"></div>
+      </div>
+
+      <div class="header-actions-col">
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle visual theme">
+          <span class="theme-label" id="themeLabel">LIGHT</span>
+          <span class="theme-checkbox-box"></span>
+        </button>
+        <button class="menu-toggle-btn" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION: EXACT REPRODUCTION OF IMAGE 2 -->
+      <section class="writings-hero-section" aria-label="Writings Title Hero">
+        
+        <!-- Hero Top Bar -->
+        <div class="writings-hero-topbar">
+          <span class="writings-hero-eyebrow">THE &bull; ESSAYS & RESEARCH ARCHIVE</span>
+          <span class="writings-hero-meta">03 PUBLICATIONS &bull; 2024–2026</span>
+        </div>
+
+        <!-- Hero Center: Huge Maroon Title (Exact Image 2) -->
+        <div class="writings-hero-center">
+          <h1 class="writings-hero-title">writings.</h1>
+          <p class="writings-hero-subtitle">
+            An inquiry into sociology, algorithmic intimacy, typography, and foundational browser craft by Jasim.
+          </p>
+        </div>
+
+        <!-- Hero Bottom Navigation -->
+        <div class="writings-hero-bottombar">
+          <a href="index.html" class="writings-back-link back-to-home" data-transition="curtain">
+            &larr; <span>BACK TO MAIN PORTFOLIO</span>
+          </a>
+
+          <button class="writings-scroll-prompt" id="writingsScrollPrompt" aria-label="Scroll to writings index">
+            <span>EXPLORE ESSAYS</span>
+            <span>&darr;</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ARCHIVE CONTROLS & ARTICLE FEED SECTION -->
+      <section class="writings-archive-section" id="writingsArchive" aria-label="Articles Directory">
+        
+        <!-- Filter Tabs & Instant Search Bar -->
+        <div class="archive-controls-bar">
+          <div class="filter-tabs-group" role="tablist" aria-label="Filter articles by category">
+            <button class="filter-pill-btn is-active" role="tab" aria-selected="true" data-filter="all">ALL (03)</button>
+            <button class="filter-pill-btn" role="tab" aria-selected="false" data-filter="academic">ACADEMIC STUDIES (01)</button>
+            <button class="filter-pill-btn" role="tab" aria-selected="false" data-filter="commerce">COMMERCE & SYSTEMS (01)</button>
+            <button class="filter-pill-btn" role="tab" aria-selected="false" data-filter="technical">TECHNICAL WRITING (01)</button>
+          </div>
+
+          <div class="archive-search-box">
+            <label for="writingsSearchInput" class="visually-hidden">Search writings</label>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="writingsSearchInput" placeholder="Filter essays by keyword...">
+          </div>
+        </div>
+
+        <!-- Articles Directory Table -->
+        <div class="articles-table" id="articlesTable">
+          
+          <!-- Article 01: Yusuf al-Qaradawi Literary Study (Academic Research in Arabic) -->
+          <article class="article-row-item" data-category="academic" data-article-id="qaradawi-literary-study" data-pdf="assets/writings/yusuf-al-qaradawi-literary-study.pdf" tabindex="0" role="button" aria-label="Read: تمثيل أدبي لأعمال يوسف القرضاوي">
+            <div class="article-index-col">
+              <span class="article-num">01</span>
+            </div>
+            <div class="article-meta-col">
+              <span class="article-date">2024</span>
+              <span class="article-tag">ACADEMIC STUDIES</span>
+              <span class="article-read-time">ARABIC &bull; 48 PAGES</span>
+              <span class="article-format-tag">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                PDF RESEARCH
+              </span>
+            </div>
+            <div class="article-content-col article-arabic-col" lang="ar" dir="rtl">
+              <h2 class="article-title article-arabic-title">تمثيل أدبي لأعمال يوسف القرضاوي مع التركيز الخاص على قصيدته "الملحمة النونية" ومسرحيته "عالم وطاغية"</h2>
+              <p class="article-excerpt article-arabic-excerpt">
+                دراسة تحليلية ونقدية تتناول التمثيل الأدبي للشيخ الدكتور يوسف القرضاوي في قصائده ومسرحياته، مع التركيز على البلاغة والأسلوب الفني في قصيدته "الملحمة النونية" ومسرحيته "عالم وطاغية"، للكشف عن البنية الخطابية والرمزية في إنتاجه الأدبي.
+              </p>
+              <div class="article-translation-sub" lang="en" dir="ltr">
+                <span class="translation-label">ENGLISH TITLE:</span>
+                <span class="translation-text">Literary Representation of the Works of Yusuf al-Qaradawi: A Special Focus on His Poem 'Al-Malhama Al-Nuniyya' and His Play 'Alim wa Taghiya' &bull; Darul Uloom Islamic Dawa College / Darul Huda Islamic University</span>
+              </div>
+            </div>
+            <div class="article-action-col">
+              <span class="read-article-btn">
+                <span>READ.</span>
+                <span>&rarr;</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- Article 02: Islamic Stock Market Analysis -->
+          <article class="article-row-item" data-category="commerce" data-article-id="islamic-stock-market-analysis" data-pdf="assets/writings/islamic-stock-market-analysis.pdf" tabindex="0" role="button" aria-label="Read: Analysing Stock Market in Islamic Shari'a">
+            <div class="article-index-col">
+              <span class="article-num">02</span>
+            </div>
+            <div class="article-meta-col">
+              <span class="article-date">15 OCT 2026</span>
+              <span class="article-tag">COMMERCE & SYSTEMS</span>
+              <span class="article-read-time">ENGLISH &bull; 8 PAGES</span>
+              <span class="article-format-tag">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                PDF RESEARCH
+              </span>
+            </div>
+            <div class="article-content-col" lang="en">
+              <h2 class="article-title">Analysing Stock Market in Islamic Shari'a</h2>
+              <p class="article-excerpt">
+                An analytical inquiry into stock market investments under Islamic jurisprudence (Mu'amalat), examining IPO mechanisms, digital trading, demand-and-supply dynamics, and the core Shari'a prohibitions of Riba (interest) and Gharar (excessive risk).
+              </p>
+            </div>
+            <div class="article-action-col">
+              <span class="read-article-btn">
+                <span>READ.</span>
+                <span>&rarr;</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- Article 03: Machine Learning in Islamic Finance -->
+          <article class="article-row-item" data-category="technical" data-article-id="machine-learning-islamic-finance" data-pdf="assets/writings/machine-learning-islamic-finance.pdf" tabindex="0" role="button" aria-label="Read: Leveraging Machine Learning in Islamic Finance">
+            <div class="article-index-col">
+              <span class="article-num">03</span>
+            </div>
+            <div class="article-meta-col">
+              <span class="article-date">15 OCT 2026</span>
+              <span class="article-tag">TECHNICAL WRITING</span>
+              <span class="article-read-time">ENGLISH &bull; 18 PAGES</span>
+              <span class="article-format-tag">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                PDF RESEARCH
+              </span>
+            </div>
+            <div class="article-content-col" lang="en">
+              <h2 class="article-title article-title-multiline">
+                <span class="title-line">Leveraging Machine Learning in Islamic Finance:</span>
+                <span class="title-line">Practical Applications, Theoretical Consideration and</span>
+                <span class="title-line">Real-World Case Studies</span>
+              </h2>
+              <p class="article-excerpt">
+                Investigating the integration of Machine Learning and Artificial Intelligence into Islamic banking, risk management, and algorithmic trading, examining practical case studies including Bank Islam Malaysia and Wahed Invest while maintaining Shari'a compliance.
+              </p>
+            </div>
+            <div class="article-action-col">
+              <span class="read-article-btn">
+                <span>READ.</span>
+                <span>&rarr;</span>
+              </span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- SECTION 5: DYNAMIC CHROME DINO RUNNER BANNER -->
+      <section class="dino-section" id="dino-runner" aria-label="Offline Chrome Dinosaur Runner">
+        <div class="dino-header-bar">
+          <div class="dino-status-wrap">
+            <span class="dino-offline-badge">NO CONNECTION</span>
+            <span class="dino-hint">TAP / PRESS SPACE TO JUMP</span>
+          </div>
+          <div class="dino-score-wrap">
+            <span class="dino-hi-score">HI <span id="dinoHiScore">00980</span></span>
+            <span class="dino-curr-score" id="dinoScore">00000</span>
+          </div>
+        </div>
+
+        <div class="dino-canvas-wrap">
+          <canvas id="dinoCanvas" width="1680" height="180"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="site-footer" id="footer" aria-label="Footer">
+      <nav class="footer-top-nav-row" aria-label="Footer Navigation">
+        <a href="index.html#hero" class="footer-nav-link back-to-home" data-transition="curtain">ABOUT</a>
+        <a href="index.html#works" class="footer-nav-link back-to-home" data-transition="curtain">WORKS</a>
+        <a href="index.html#chat" class="footer-nav-link back-to-home" data-transition="curtain">CONTACT</a>
+      </nav>
+
+      <div class="footer-middle-row">
+        <div class="footer-elsewhere-col">
+          <span class="footer-eyebrow">ELSEWHERE</span>
+          <ul class="footer-social-list">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">INSTAGRAM <span class="footer-arrow">&rarr;</span></a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YOUTUBE <span class="footer-arrow">&rarr;</span></a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LINKEDIN <span class="footer-arrow">&rarr;</span></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-colophon-col">
+          <span class="footer-eyebrow">COLOPHON</span>
+          <p class="footer-copyright-text">&copy; 2026 LEGO. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-brand-row">
+        <h2 class="footer-massive-logo">lego.</h2>
+      </div>
+    </footer>
+
+    <!-- SLIDE OUT MENU MODAL -->
+    <div class="navigation-drawer" id="navDrawer" aria-hidden="true">
+      <div class="drawer-backdrop" id="drawerBackdrop"></div>
+      <div class="drawer-panel">
+        <div class="drawer-header">
+          <span class="drawer-brand">lego.</span>
+          <button class="drawer-close-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+        </div>
+        <nav class="drawer-nav">
+          <ul class="drawer-links">
+            <li><a href="index.html#hero" class="drawer-nav-item back-to-home" data-transition="curtain"><span>01</span> The Entrepreneur</a></li>
+            <li><a href="index.html#works" class="drawer-nav-item back-to-home" data-transition="curtain"><span>02</span> Selected Projects</a></li>
+            <li><a href="web-development.html" class="drawer-nav-item" data-transition="curtain"><span>03</span> Web Development Works</a></li>
+            <li><a href="index.html#services" class="drawer-nav-item back-to-home" data-transition="curtain"><span>04</span> The Works</a></li>
+            <li><a href="writings.html" class="drawer-nav-item" data-transition="curtain"><span>05</span> Writings Archive</a></li>
+            <li><a href="index.html#chat" class="drawer-nav-item back-to-home" data-transition="curtain"><span>06</span> Let's Chat</a></li>
+          </ul>
+        </nav>
+        <div class="drawer-footer">
+          <p>Kerala, India &bull; &copy; 2026 Jasim</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FULL ESSAY READING MODAL -->
+    <div class="reader-modal" id="readerModal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="reader-backdrop" id="readerBackdrop"></div>
+      <div class="reader-drawer">
+        <div class="reader-header">
+          <span class="reader-category-pill" id="readerCategoryPill">SOCIOLOGY & WEB</span>
+          <button class="reader-close-btn" id="readerClose" aria-label="Close essay viewer">&times; CLOSE [ESC]</button>
+        </div>
+        <div class="reader-body-scroll">
+          <h1 class="reader-article-title" id="readerArticleTitle">Article Title</h1>
+          <div class="reader-meta-row">
+            <span id="readerArticleDate">14 OCT 2026</span>
+            <span>&bull;</span>
+            <span id="readerArticleReadTime">8 MIN READ</span>
+            <span>&bull;</span>
+            <span>BY JASIM</span>
+          </div>
+          <div class="reader-prose" id="readerProseBody">
+            <!-- Full content inserted via writings.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="transition.js"></script>
+  <script src="app.js"></script>
+  <script src="writings.js"></script>
+</body>
+</html>

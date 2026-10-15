@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web development. — Jasim / lego.</title>
+  <meta name="description" content="Production web platforms, responsive design engineering, and architectural prototypes crafted with precision by Jasim.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('lego-theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('theme-dark');
+        document.addEventListener('DOMContentLoaded', () => document.body.classList.add('theme-dark'));
+      }
+    })();
+  </script>
+</head>
+<body class="theme-sage page-webdev">
+
+  <!-- Master Site Container -->
+  <div class="site-container">
+
+    <!-- 12-Column Architectural Background Grid Lines -->
+    <div class="architectural-grid-overlay" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="site-header" id="header">
+      <div class="header-logo-col">
+        <a href="index.html" class="brand-logo back-to-home" data-transition="curtain" aria-label="lego. homepage">lego.</a>
+      </div>
+
+      <div class="header-ticker-col" aria-live="off">
+        <div class="world-clocks-wrapper">
+          <div class="world-clocks-ticker" id="clocksTicker">
+            <span class="clock-item" data-tz="Europe/Berlin"><span class="clock-city">BERLIN</span> <span class="clock-time">02:02:47</span> <span class="clock-zone">CEST</span></span>
+            <span class="ticker-slash">/</span>
+            <span class="clock-item" data-tz="Europe/London"><span class="clock-city">LONDON</span> <span class="clock-time">01:02:47</span> <span class="clock-zone">BST</span></span>
+            <span class="ticker-slash">/</span>
+            <span class="clock-item" data-tz="America/New_York"><span class="clock-city">NEW YORK</span> <span class="clock-time">20:02:47</span> <span class="clock-zone">EDT</span></span>
+            <span class="ticker-slash">/</span>
+            <span class="clock-item" data-tz="America/Los_Angeles"><span class="clock-city">LOS ANGELES</span> <span class="clock-time">17:02:47</span> <span class="clock-zone">PDT</span></span>
+            <span class="ticker-slash">/</span>
+            <span class="clock-item" data-tz="Australia/Brisbane"><span class="clock-city">BRISBANE</span> <span class="clock-time">10:02:47</span> <span class="clock-zone">AEST</span></span>
+          </div>
+        </div>
+        <div class="ticker-accent-pill" aria-hidden="true"></div>
+      </div>
+
+      <div class="header-actions-col">
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle visual theme">
+          <span class="theme-label" id="themeLabel">LIGHT</span>
+          <span class="theme-checkbox-box"></span>
+        </button>
+        <button class="menu-toggle-btn" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="webdev-hero-section" aria-label="Web Development Hero">
+        
+        <!-- Hero Top Bar -->
+        <div class="webdev-hero-topbar">
+          <span class="webdev-hero-eyebrow">THE &bull; WEB DEVELOPMENT & ENGINEERING ARCHIVE</span>
+          <span class="webdev-hero-meta">04 PRODUCTION CLIENT BUILDS &bull; 2025–2026</span>
+        </div>
+
+        <!-- Hero Center: Huge Maroon Title -->
+        <div class="webdev-hero-center">
+          <h1 class="webdev-hero-title">web development.</h1>
+          <p class="webdev-hero-subtitle">
+            Production web platforms, responsive design engineering, and architectural prototypes crafted with precision. Explore full-length scrollable captures in both mobile and desktop viewports below.
+          </p>
+
+          <div class="webdev-hero-actions">
+            <a href="#webdevStage" class="webdev-action-btn btn-primary">
+              <span>EXPLORE ALL 4 BUILDS</span>
+              <span>&darr;</span>
+            </a>
+            <a href="#proceduresSection" class="webdev-action-btn">
+              <span>PROCEDURES: ADDING DESIGNS</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="writings.html" class="webdev-action-btn" data-transition="curtain">
+              <span>WRITINGS ARCHIVE</span>
+              <span>&nearr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Bottom Navigation -->
+        <div class="webdev-hero-bottombar">
+          <a href="index.html" class="webdev-back-link back-to-home" data-transition="curtain">
+            &larr; <span>BACK TO MAIN PORTFOLIO</span>
+          </a>
+          <span class="webdev-hero-meta">INTERACTIVE DUAL-DEVICE VIEWPORT ENGINE</span>
+        </div>
+
+      </section>
+
+      <!-- STICKY PROJECT SELECTOR TABS BAR -->
+      <nav class="webdev-tabs-bar" role="tablist" aria-label="Web development projects list">
+        
+        <!-- Tab 01 -->
+        <button class="webdev-project-tab is-active" id="projectTab0" role="tab" aria-selected="true" aria-controls="webdevStage" data-index="0">
+          <div class="tab-top-row">
+            <span class="tab-num">01</span>
+            <span class="tab-status-pill">LIVE &bull; VERIFIED</span>
+          </div>
+          <span class="tab-title">dento-care</span>
+          <span class="tab-category">HEALTHCARE & DENTAL CLINIC</span>
+        </button>
+
+        <!-- Tab 02 -->
+        <button class="webdev-project-tab" id="projectTab1" role="tab" aria-selected="false" aria-controls="webdevStage" data-index="1">
+          <div class="tab-top-row">
+            <span class="tab-num">02</span>
+            <span class="tab-status-pill">LIVE &bull; VERIFIED</span>
+          </div>
+          <span class="tab-title">Smile-Dentos</span>
+          <span class="tab-category">FAMILY DENTAL CLINIC</span>
+        </button>
+
+        <!-- Tab 03 -->
+        <button class="webdev-project-tab" id="projectTab2" role="tab" aria-selected="false" aria-controls="webdevStage" data-index="2">
+          <div class="tab-top-row">
+            <span class="tab-num">03</span>
+            <span class="tab-status-pill">LIVE &bull; VERIFIED</span>
+          </div>
+          <span class="tab-title">al-shahama-eye-hospital</span>
+          <span class="tab-category">OPHTHALMOLOGY & MEDICAL</span>
+        </button>
+
+        <!-- Tab 04 -->
+        <button class="webdev-project-tab" id="projectTab3" role="tab" aria-selected="false" aria-controls="webdevStage" data-index="3">
+          <div class="tab-top-row">
+            <span class="tab-num">04</span>
+            <span class="tab-status-pill">LIVE &bull; VERIFIED</span>
+          </div>
+          <span class="tab-title">naturals-salon</span>
+          <span class="tab-category">BEAUTY & WELLNESS PLATFORM</span>
+        </button>
+
+      </nav>
+
+      <!-- VIEWPORT CONTROLS BAR -->
+      <div class="webdev-controls-bar">
+        <div class="controls-left-group">
+          <div class="view-mode-toggle" role="group" aria-label="Viewport display mode">
+            <button class="view-mode-btn is-active" data-mode="dual">
+              <span>DUAL VIEW</span>
+            </button>
+            <button class="view-mode-btn" data-mode="mobile">
+              <span>MOBILE FOCUS</span>
+            </button>
+            <button class="view-mode-btn" data-mode="desktop">
+              <span>DESKTOP FOCUS</span>
+            </button>
+          </div>
+
+          <div class="scroll-hint-pill">
+            <span class="scroll-hint-dot"></span>
+            <span>FULL WEBSITE SCROLL ENABLED &bull; SCROLL INSIDE FRAMES OR CLICK AUTO-SCROLL</span>
+          </div>
+        </div>
+
+        <div class="controls-right-links">
+          <a href="https://www.dentocareofficial.com" target="_blank" rel="noopener noreferrer" class="stage-action-pill" id="liveLinkBtn" aria-label="Visit active project live website">
+            <span>VISIT LIVE WEBSITE</span>
+            <span>&nearr;</span>
+          </a>
+          <a href="https://github.com/nessentialscode/dento-care.git" target="_blank" rel="noopener noreferrer" class="stage-action-pill" id="githubLinkBtn" aria-label="View active project GitHub repository">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GITHUB REPO</span>
+            <span>&nearr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE DUAL DEVICE SHOWCASE STAGE -->
+      <section class="webdev-showcase-stage mode-dual" id="webdevStage" aria-label="Interactive Projects Stage">
+        <div class="devices-dual-grid">
+          
+          <!-- LEFT: REALISTIC MOBILE DEVICE FRAME (FULLY SCROLLABLE DOWN TO THE END) -->
+          <div class="mobile-stage-column">
+            <div class="device-column-header">
+              <span class="device-header-title">MOBILE UI &bull; FULL LENGTH</span>
+              <span class="device-header-progress" id="mobileProgress">0% SCROLLED</span>
+            </div>
+
+            <!-- Realistic Smartphone Chassis -->
+            <div class="scrollable-phone-frame" id="phoneChassis">
+              <div class="phone-speaker-island" aria-hidden="true">
+                <span class="island-camera-dot"></span>
+                <span class="island-sensor-bar"></span>
+              </div>
+
+              <!-- Internal Scrollable Screen containing Full-Length Mobile UI -->
+              <div class="scrollable-phone-viewport" id="mobileViewport" tabindex="0" aria-label="Scrollable mobile preview of project">
+                <img src="assets/projects/fullpage/dentocare_mobile_full.png" alt="dento-care full mobile website capture" class="scrollable-phone-img" id="mobileFullImg">
+              </div>
+
+              <div class="phone-bottom-home-bar" aria-hidden="true"></div>
+            </div>
+
+            <!-- Mobile Device Scroll Quick Controls -->
+            <div class="device-scroll-controls">
+              <button class="scroll-ctrl-btn" id="mobileScrollTop" title="Scroll mobile preview to top">
+                <span>&uarr; TOP</span>
+              </button>
+              <button class="scroll-ctrl-btn" id="mobileAutoScroll" title="Toggle automatic continuous scroll">
+                <span>&#9654; AUTO-SCROLL</span>
+              </button>
+              <button class="scroll-ctrl-btn" id="mobileScrollEnd" title="Scroll mobile preview to footer">
+                <span>&darr; END</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- RIGHT: REALISTIC DESKTOP BROWSER FRAME (FULLY SCROLLABLE DOWN TO THE END) -->
+          <div class="desktop-stage-column">
+            
+            <!-- Desktop Top Metadata -->
+            <div class="desktop-stage-header">
+              <div class="desktop-project-meta">
+                <div class="meta-index-row">
+                  <span class="project-index-badge" id="projectIndexEl">01</span>
+                  <span class="project-category-badge" id="projectCategoryEl">HEALTHCARE & DENTAL CLINIC</span>
+                </div>
+                <h2 class="desktop-project-title" id="projectTitleEl">Dento Care Dental Clinic</h2>
+                <p class="desktop-project-desc" id="projectDescEl">
+                  Comprehensive dental clinic web platform featuring instant appointment scheduling, interactive service catalog, and treatment showcase.
+                </p>
+              </div>
+
+              <div class="desktop-action-buttons">
+                <a href="https://www.dentocareofficial.com" target="_blank" rel="noopener noreferrer" class="desktop-cta-btn btn-visit-primary" id="activeLiveCta">
+                  <span>VISIT LIVE WEBSITE</span>
+                  <span>&nearr;</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Realistic Browser Chrome Window -->
+            <div class="scrollable-browser-frame">
+              
+              <!-- Chrome Address Bar -->
+              <div class="browser-chrome-topbar">
+                <div class="browser-dots" aria-hidden="true">
+                  <span class="b-dot dot-r"></span>
+                  <span class="b-dot dot-y"></span>
+                  <span class="b-dot dot-g"></span>
+                </div>
+
+                <a href="https://www.dentocareofficial.com" target="_blank" rel="noopener noreferrer" class="browser-url-bar" id="browserUrlLink" title="Open live site">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span id="browserUrlText">https://www.dentocareofficial.com</span>
+                </a>
+
+                <div class="browser-controls-right">
+                  <button class="browser-scroll-btn" id="desktopScrollTop" title="Scroll desktop to top">&uarr; TOP</button>
+                  <button class="browser-scroll-btn" id="desktopAutoScroll" title="Toggle automatic desktop scroll">&#9654; AUTO</button>
+                  <button class="browser-scroll-btn" id="desktopScrollEnd" title="Scroll desktop to end">&darr; END</button>
+                  <span class="browser-progress-pill" id="desktopProgress">0% SCROLLED</span>
+                </div>
+              </div>
+
+              <!-- Internal Scrollable Desktop Browser Viewport containing Full-Length Desktop UI -->
+              <div class="scrollable-desktop-viewport" id="desktopViewport" tabindex="0" aria-label="Scrollable desktop preview of project">
+                <img src="assets/projects/fullpage/dentocare_desktop_full.png" alt="dento-care full desktop website capture" class="scrollable-desktop-img" id="desktopFullImg">
+              </div>
+
+            </div>
+
+            <!-- Desktop Bottom Tech Stack / Notice -->
+            <div class="desktop-bottom-meta">
+              <div class="desktop-tags-row" id="projectTagsContainer">
+                <span class="webdev-tag-pill">HEALTHCARE</span>
+                <span class="webdev-tag-pill">DENTAL CLINIC</span>
+                <span class="webdev-tag-pill">UI/UX DESIGN</span>
+                <span class="webdev-tag-pill">NEXT.JS</span>
+              </div>
+              <span class="desktop-viewport-notice">SCROLL INSIDE DESKTOP WINDOW TO INSPECT ALL SECTIONS DOWN TO FOOTER</span>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROJECT ARCHITECTURE & CASE STUDY SPECIFICATION -->
+      <section class="webdev-case-section" aria-label="Project Architectural Case Study">
+        <div class="case-section-header">
+          <span class="case-header-eyebrow">ENGINEERING SPECIFICATION &bull; ARCHITECTURAL SUMMARY</span>
+          <span class="webdev-hero-meta">KEY TECHNICAL DECISIONS &bull; OUTCOMES</span>
+        </div>
+
+        <div class="case-grid-row">
+          
+          <div class="case-grid-col">
+            <h3 class="case-col-title">
+              <span>01</span>
+              <span>Problem & Context</span>
+            </h3>
+            <p class="case-col-body" id="caseProblemEl">
+              Traditional dental clinic patients often struggle with opaque pricing, cumbersome phone-only scheduling, and lack of visual clarity regarding dental procedures.
+            </p>
+          </div>
+
+          <div class="case-grid-col">
+            <h3 class="case-col-title">
+              <span>02</span>
+              <span>Solution & UX Design</span>
+            </h3>
+            <p class="case-col-body" id="caseSolutionEl">
+              Engineered a modern web portal featuring instantaneous digital appointment booking, categorized treatment cards, transparent service information, and direct WhatsApp triage.
+            </p>
+          </div>
+
+          <div class="case-grid-col">
+            <h3 class="case-col-title">
+              <span>03</span>
+              <span>Architecture & Decisions</span>
+            </h3>
+            <ul class="case-bullet-list" id="caseArchList">
+              <li>Next.js framework for fast server-side rendering and search engine indexation.</li>
+              <li>Mobile-first responsive layout tailored for fast smartphone scheduling.</li>
+              <li>Accessible keyboard-navigable forms and WCAG AA contrast compliance.</li>
+              <li>Optimized lightweight asset delivery with Vercel Edge caching.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROCEDURES: HOW TO ADD NEW DESIGNS & BUILDS -->
+      <section class="procedures-section" id="proceduresSection" aria-label="Procedures for Adding New Designs">
+        
+        <div class="procedures-header-bar">
+          <div>
+            <span class="webdev-hero-eyebrow">DOCUMENTATION &bull; WORKFLOW PROCEDURES</span>
+            <h2 class="procedures-main-title">How to Add New Designs & Web Projects</h2>
+          </div>
+          <span class="webdev-hero-meta">STANDARD OPERATING PROCEDURE &bull; ZERO BUILD STEP</span>
+        </div>
+
+        <div class="procedures-cards-grid">
+          
+          <!-- Step 1 -->
+          <div class="procedure-step-card">
+            <span class="step-card-num">01</span>
+            <h3 class="step-card-title">Capture Full-Length Mockups</h3>
+            <p class="step-card-desc">
+              Capture high-resolution full-page screenshot scrolls of your completed website or design prototype in both viewports:
+            </p>
+            <div class="step-code-badge">
+              Mobile: 390px / 430px (e.g. iPhone 15 Pro)<br>
+              Desktop: 1440px / 1680px (Standard HiDPI)
+            </div>
+            <p class="step-card-desc">
+              Tip: Use Chrome DevTools &gt; Run &gt; "Capture full size screenshot" or GoFullPage extension.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="procedure-step-card">
+            <span class="step-card-num">02</span>
+            <h3 class="step-card-title">Save to Assets Directory</h3>
+            <p class="step-card-desc">
+              Place your exported high-res PNG or WebP files in the projects assets folder following the naming convention:
+            </p>
+            <div class="step-code-badge">
+              assets/projects/fullpage/{slug}_mobile_full.png<br>
+              assets/projects/fullpage/{slug}_desktop_full.png<br>
+              assets/projects/{slug}_desktop.png (hero crop)
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="procedure-step-card">
+            <span class="step-card-num">03</span>
+            <h3 class="step-card-title">Register in WEB_PROJECTS</h3>
+            <p class="step-card-desc">
+              Open <a href="webdev.js" style="color: inherit; font-weight: 600;">webdev.js</a> and append a new project object to the <code>WEB_PROJECTS</code> array with your metadata, live URL, and GitHub repository.
+            </p>
+            <div class="step-code-badge">
+              id, num, title, category, liveUrl, githubUrl, mobileImg, desktopImg, tags, problem, solution, architecture
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="procedure-step-card">
+            <span class="step-card-num">04</span>
+            <h3 class="step-card-title">Add Tab & Verify Scroll</h3>
+            <p class="step-card-desc">
+              Add a matching <code>&lt;button class="webdev-project-tab"&gt;</code> inside <code>web-development.html</code>, reload the page, and verify the full vertical scroll experience down to the footer in both devices.
+            </p>
+            <div class="step-code-badge">
+              Checklist: Live link 200 OK &bull; GitHub link active &bull; Smooth scroll verified
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Code Block Schema Template -->
+        <div class="procedure-code-block">
+          <div class="code-block-header">
+            <span class="code-block-label">COPYABLE TEMPLATE SNIPPET FOR WEB_PROJECTS (IN WEBDEV.JS)</span>
+            <span class="webdev-hero-meta">READY TO COPY & PASTE</span>
+          </div>
+          <pre class="code-pre-element"><code>{
+  id: 'your-project-id',
+  num: '05',
+  name: 'project-name',
+  title: 'Your Project Display Title',
+  category: 'CLIENT CATEGORY OR NICHE',
+  liveUrl: 'https://your-live-website.com',
+  displayUrl: 'https://your-live-website.com',
+  githubUrl: 'https://github.com/nessentialscode/your-repo.git',
+  mobileImg: 'assets/projects/fullpage/yourproject_mobile_full.png',
+  desktopImg: 'assets/projects/fullpage/yourproject_desktop_full.png',
+  tags: ['REACT', 'NEXT.JS', 'UI/UX DESIGN', 'TAILWIND', 'RESPONSIVE'],
+  description: 'Concise summary of the platform, booking workflows, and client outcomes.',
+  problem: 'The primary challenge or business bottleneck the client faced prior to the website build.',
+  solution: 'The creative engineering and UX design solution implemented to solve the problem.',
+  architecture: [
+    'Technical decision 1 (e.g. Next.js server-side rendering for optimal Core Web Vitals).',
+    'Technical decision 2 (e.g. Direct API or WhatsApp triage conversion funnel).',
+    'Technical decision 3 (e.g. Accessible design compliant with WCAG AA standards).'
+  ]
+}</code></pre>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="site-footer" id="footer" aria-label="Footer">
+      <nav class="footer-top-nav-row" aria-label="Footer Navigation">
+        <a href="index.html#hero" class="footer-nav-link back-to-home" data-transition="curtain">ABOUT</a>
+        <a href="index.html#works" class="footer-nav-link back-to-home" data-transition="curtain">WORKS</a>
+        <a href="writings.html" class="footer-nav-link" data-transition="curtain">WRITINGS</a>
+        <a href="index.html#chat" class="footer-nav-link back-to-home" data-transition="curtain">CONTACT</a>
+      </nav>
+
+      <div class="footer-middle-row">
+        <div class="footer-elsewhere-col">
+          <span class="footer-eyebrow">ELSEWHERE</span>
+          <ul class="footer-social-list">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">INSTAGRAM <span class="footer-arrow">&rarr;</span></a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YOUTUBE <span class="footer-arrow">&rarr;</span></a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LINKEDIN <span class="footer-arrow">&rarr;</span></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-colophon-col">
+          <span class="footer-eyebrow">COLOPHON</span>
+          <p class="footer-copyright-text">&copy; 2026 LEGO. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-brand-row">
+        <h2 class="footer-massive-logo">lego.</h2>
+      </div>
+    </footer>
+
+    <!-- SLIDE OUT MENU MODAL -->
+    <div class="navigation-drawer" id="navDrawer" aria-hidden="true">
+      <div class="drawer-backdrop" id="drawerBackdrop"></div>
+      <div class="drawer-panel">
+        <div class="drawer-header">
+          <span class="drawer-brand">lego.</span>
+          <button class="drawer-close-btn" id="drawerClose" aria-label="Close menu">&times;</button>
+        </div>
+        <nav class="drawer-nav">
+          <ul class="drawer-links">
+            <li><a href="index.html#hero" class="drawer-nav-item back-to-home" data-transition="curtain"><span>01</span> The Entrepreneur</a></li>
+            <li><a href="index.html#works" class="drawer-nav-item back-to-home" data-transition="curtain"><span>02</span> Selected Projects</a></li>
+            <li><a href="web-development.html" class="drawer-nav-item" data-transition="curtain"><span>03</span> Web Development Works</a></li>
+            <li><a href="index.html#services" class="drawer-nav-item back-to-home" data-transition="curtain"><span>04</span> The Works</a></li>
+            <li><a href="writings.html" class="drawer-nav-item" data-transition="curtain"><span>05</span> Writings Archive</a></li>
+            <li><a href="index.html#chat" class="drawer-nav-item back-to-home" data-transition="curtain"><span>06</span> Let's Chat</a></li>
+          </ul>
+        </nav>
+        <div class="drawer-footer">
+          <p>Kerala, India &bull; &copy; 2026 Jasim</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="transition.js"></script>
+  <script src="webdev.js"></script>
+</body>
+</html>
